@@ -44,10 +44,13 @@ $(function () {
 
     $(document).ready(function () {
 
+        var form = $('.searchbox');
         var input = $('.searchbox input');
         var button = $('.searchbox button');
 
-        button.click(function () {
+        form.submit(function (e) {
+            e.preventDefault();
+
             var query = input.val();
             if (query === '') return;
 
