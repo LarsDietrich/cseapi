@@ -3,6 +3,41 @@
 <title>Google CSE Ajax API</title>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script src="cseapi.js"></script>
+<style>
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+a:link .title {
+    color: #12c;
+}
+
+a:visited .title {
+    color: #61c;
+}
+
+a:hover .title {
+    text-decoration: underline;
+}
+
+.title,
+.snippet,
+.link {
+    margin: 0;
+}
+
+.link {
+    color: #093;
+}
+
+.item {
+    margin: 0 0 1.5em;
+}
+
+
+</style>
 <body>
 <form class="searchbox">
 <input name="query" autofocus>
