@@ -32,15 +32,22 @@ $(function () {
 
             render: function (items) {
 
-                var i = items[0];
-                box.html(i.title + '<br/>'+ i.link + '<br/>' +i.snippet).hide().fadeIn(250);
+                var markup = '';
+                $(items).each(function (i, item) {
+
+                    markup += '<a class="item" href="' + item.link + '">\n' +
+                              '<h2 class="title">' + item.title + '</h2>\n' +
+                              '<p class="snippet">' + item.snippet + '</p>\n' +
+                              '<p class="link">' + item.link + '</p>\n' +
+                              '</a>\n\n';
+
+                });
+                box.html(markup).hide().fadeIn(250);
 
             }
 
         };
     }());
-
-
 
     $(document).ready(function () {
 
@@ -60,7 +67,6 @@ $(function () {
         $(window).bind('Result.get', function (e, items) {
             SERPBox.render(items);
         });
-
 
     });
 
