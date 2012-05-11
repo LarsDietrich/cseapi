@@ -37,8 +37,8 @@ $(function () {
 
                     markup += '<a class="item" href="' + item.link + '">\n' +
                               '<h2 class="title">' + item.title + '</h2>\n' +
-                              '<p class="snippet">' + item.snippet + '</p>\n' +
                               '<p class="link">' + item.link + '</p>\n' +
+                              '<p class="snippet">' + item.snippet + '</p>\n' +
                               '</a>\n\n';
 
                 });
